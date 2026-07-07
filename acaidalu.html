@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="pt-BR"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260707-03-b8b85bc"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Açaí da Lalu Delivery — monte seu açaí, escolha complementos e receba em casa. Pedidos rápidos e frete calculado automaticamente.">
+  <title>Açaí da Lalu Delivery — Peça seu açaí</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <script src="/_sdk/0179d719c431a79e.data_sdk.js" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+  <style>
+  :root{
+    --primary:#4B0E6B; --btn:#7B2CBF; --accent:#C77DFF; --success:#7ED957;
+    --bg:#FFFFFF; --section:#F5F5F5;
+  }
+  body{ font-family:'DM Sans',sans-serif; }
+  h1,h2,h3,.font-display{ font-family:'Fraunces',serif; }
+  .fade-up{ opacity:0; transform:translateY(16px); animation:fadeUp .6s ease forwards; }
+  @keyframes fadeUp{ to{ opacity:1; transform:none; } }
+  .chip{ transition:all .2s ease; }
+  .chip.is-active{ background:var(--success)!important; color:#0e3d12!important; border-color:var(--success)!important; box-shadow:0 4px 14px rgba(126,217,87,.4); }
+  .chip.is-disabled{ opacity:.4; cursor:not-allowed; }
+  .prod-card{ transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .prod-card:hover{ transform:translateY(-4px); }
+  .prod-card.is-selected{ border-color:var(--accent); box-shadow:0 10px 30px rgba(199,125,255,.35); }
+  .prod-card.is-selected .prod-badge{ opacity:1; transform:scale(1); }
+  .prod-badge{ opacity:0; transform:scale(.6); transition:all .25s ease; }
+  .pill{ transition:all .2s ease; }
+  .pill.is-active{ background:var(--btn)!important; color:#fff!important; box-shadow:0 6px 18px rgba(123,44,191,.35); }
+  .btn-main{ transition:transform .15s ease, box-shadow .2s ease, filter .2s ease; }
+  .btn-main:hover{ transform:translateY(-2px); filter:brightness(1.06); box-shadow:0 10px 26px rgba(123,44,191,.4); }
+  .btn-main:active{ transform:translateY(0); }
+  .stepper-btn{ transition:transform .12s ease, background .2s ease; }
+  .stepper-btn:hover{ transform:scale(1.1); }
+  .spin{ animation:spin 1s linear infinite; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  input:focus-visible, select:focus-visible, button:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; }
+  ::selection{ background:var(--accent); color:#fff; }
+</style>
+  <script src="/_sdk/0b3af1c300e720aa.resizing_sdk.js" type="text/javascript" integrity="sha512-nX1P6oXZmEY5wCI2lUVg3BwKu1cr0yi+ZpXgZ0Yn90vkSwvpmyzBMvOyD6VLJUtBwFI2dSrw1b6OvORxSggw3w=="></script>
+ </head>
+ <body data-template-id="__page-root" class="min-h-screen text-slate-800" style="background:#FFFFFF"><!-- HERO -->
+  <header data-template-id="hero-section" class="canva-header w-full relative overflow-hidden" style="background: linear-gradient(135deg, rgb(75, 14, 107), rgb(123, 44, 191));">
+   <div class="w-full h-full absolute inset-0"><img data-template-id="hero-image" loading="lazy" class="canva-image w-full h-full object-cover opacity-25" src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Tigela de açaí vibrante coberta com frutas frescas e granola">
+   </div>
+   <div class="relative max-w-5xl mx-auto px-5 py-14 sm:py-20 text-center fade-up"><span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-5" style="background:rgba(255,255,255,.15);color:#fff;backdrop-filter:blur(4px)"> <i data-lucide="ice-cream-2" style="width:16px;height:16px"></i> Delivery de Açaí </span>
+    <h1 data-template-id="brand-name" class="canva-text leading-tight" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 44px;">Açaí da Lalu Delivery</h1>
+    <p data-template-id="brand-tagline" class="canva-text mt-3 max-w-xl mx-auto" style="color: rgb(240, 227, 250); font-weight: 400; font-style: normal; font-size: 17px;">Monte seu açaí do jeitinho que você gosta e receba fresquinho na sua casa. Rápido, delicioso e feito com carinho! 💜</p>
+   </div>
+  </header><!-- CONTACT -->
+  <nav aria-label="Contato" class="w-full" style="background:var(--section)">
+   <div class="max-w-5xl mx-auto px-5 py-4 grid gap-3 sm:grid-cols-3 text-center text-sm"><a data-template-id="contact-whatsapp" href="https://wa.me/5584998107521" target="_blank" rel="noopener noreferrer" class="canva-link inline-flex items-center justify-center gap-2 py-2 rounded-lg font-medium hover:opacity-80 transition" style="color: rgb(75, 14, 107); font-weight: 500; font-style: normal; font-size: 16px;">(84) 99810-7521</a> <a data-template-id="contact-instagram" href="https://instagram.com/Acai_dalu_delivery" target="_blank" rel="noopener noreferrer" class="canva-link inline-flex items-center justify-center gap-2 py-2 rounded-lg font-medium hover:opacity-80 transition" style="color: rgb(75, 14, 107); font-weight: 500; font-style: normal; font-size: 16px;">@Acai_dalu_delivery</a> <a data-template-id="contact-email" href="mailto:acaidalu603@gmail.com" class="canva-link inline-flex items-center justify-center gap-2 py-2 rounded-lg font-medium hover:opacity-80 transition" style="color: rgb(75, 14, 107); font-weight: 500; font-style: normal; font-size: 16px;">acaidalu603@gmail.com</a>
+   </div>
+  </nav>
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-10"><!-- STEP 1: SIZE -->
+   <section aria-labelledby="s1" class="fade-up">
+    <h2 id="s1" data-template-id="size-title" class="canva-text mb-4" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 26px;">1. Escolha o tamanho</h2>
+    <div class="grid sm:grid-cols-2 gap-4"><button type="button" data-size="300" onclick="selectSize('300')" data-template-id="product-300" class="prod-card canva-card relative text-left bg-white rounded-2xl border-2 border-slate-100 overflow-hidden" style="background: rgb(255, 255, 255);"> <span class="prod-badge absolute top-3 right-3 z-10 rounded-full p-1.5 text-white" style="background:var(--success)"><i data-lucide="check" style="width:16px;height:16px"></i></span> <img data-template-id="product-300-img" loading="lazy" class="canva-image w-full h-40 object-cover" src="https://images.pexels.com/photos/9024838/pexels-photo-9024838.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Tigela de smoothie de frutas com banana e mirtilos">
+      <div class="p-4">
+       <h3 data-template-id="product-300-name" class="canva-text" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 20px;">Açaí 300 ml</h3>
+       <p data-template-id="product-300-price" class="canva-text font-bold mt-1" style="color: rgb(123, 44, 191); font-weight: 700; font-style: normal; font-size: 20px;">R$ 15,00</p>
+       <p data-template-id="product-300-desc" class="canva-text text-sm mt-2 text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Inclui grátis: até 3 complementos + 1 creme</p>
+      </div></button> <button type="button" data-size="500" onclick="selectSize('500')" data-template-id="product-500" class="prod-card canva-card relative text-left bg-white rounded-2xl border-2 border-slate-100 overflow-hidden" style="background: rgb(255, 255, 255);"> <span class="prod-badge absolute top-3 right-3 z-10 rounded-full p-1.5 text-white" style="background:var(--success)"><i data-lucide="check" style="width:16px;height:16px"></i></span> <img data-template-id="product-500-img" loading="lazy" class="canva-image w-full h-40 object-cover" src="https://images.pexels.com/photos/3035261/pexels-photo-3035261.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Tigela de smoothie coberta com granola e chocolates">
+      <div class="p-4">
+       <h3 data-template-id="product-500-name" class="canva-text" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 20px;">Açaí 500 ml</h3>
+       <p data-template-id="product-500-price" class="canva-text font-bold mt-1" style="color: rgb(123, 44, 191); font-weight: 700; font-style: normal; font-size: 20px;">R$ 18,00</p>
+       <p data-template-id="product-500-desc" class="canva-text text-sm mt-2 text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Inclui grátis: até 5 complementos + 1 creme</p>
+      </div></button>
+    </div>
+   </section><!-- STEP 2: FREE TOPPINGS -->
+   <section aria-labelledby="s2" id="step-free" class="fade-up rounded-2xl p-5" style="background:var(--section)">
+    <h2 id="s2" data-template-id="toppings-title" class="canva-text" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 24px;">2. Complementos gratuitos</h2>
+    <p data-template-id="toppings-help" class="canva-text text-sm mt-1 mb-4" style="color: rgb(123, 44, 191); font-weight: 400; font-style: normal; font-size: 14px;">Selecione um tamanho para liberar seus complementos grátis. O extra é cobrado à parte.</p>
+    <p id="free-counter" class="text-sm font-semibold mb-3" style="color:var(--btn)"></p>
+    <div id="free-toppings" class="flex flex-wrap gap-2"></div>
+   </section><!-- STEP 3: FREE CREAM -->
+   <section aria-labelledby="s3" class="fade-up">
+    <h2 id="s3" data-template-id="cream-title" class="canva-text mb-3" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 24px;">3. Escolha 1 creme (grátis)</h2>
+    <div id="free-cream" class="flex flex-wrap gap-2"></div>
+   </section><!-- STEP 4: PAID EXTRAS -->
+   <section aria-labelledby="s4" class="fade-up rounded-2xl p-5" style="background:var(--section)">
+    <h2 id="s4" data-template-id="extras-title" class="canva-text" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 24px;">4. Adicionais (pagos)</h2>
+    <p data-template-id="extras-help" class="canva-text text-sm mt-1 mb-4 text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 14px;">Turbine seu açaí com quantidades extras. O valor é somado ao total.</p>
+    <div id="paid-extras" class="space-y-2"></div>
+   </section><!-- STEP 5: DELIVERY -->
+   <section aria-labelledby="s5" class="fade-up">
+    <h2 id="s5" data-template-id="delivery-title" class="canva-text mb-3" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 24px;">5. Entrega ou retirada</h2>
+    <div class="flex flex-wrap gap-2 mb-4"><button type="button" onclick="setDeliveryType('Entrega')" data-template-id="delivery-opt" id="opt-entrega" class="pill canva-button px-5 py-2.5 rounded-full font-medium bg-white border-2 border-slate-200" style="background: rgb(255, 255, 255); color: rgb(75, 14, 107); font-weight: 500; font-style: normal; font-size: 16px;">🛵 Entrega</button> <button type="button" onclick="setDeliveryType('Retirada')" data-template-id="pickup-opt" id="opt-retirada" class="pill canva-button px-5 py-2.5 rounded-full font-medium bg-white border-2 border-slate-200" style="background: rgb(255, 255, 255); color: rgb(75, 14, 107); font-weight: 500; font-style: normal; font-size: 16px;">🏪 Retirar na loja</button>
+    </div>
+    <div id="delivery-form" class="hidden space-y-4">
+     <div data-template-id="delivery-warning" class="canva-banner rounded-xl p-3 text-sm font-semibold flex items-start gap-2" style="background: rgb(255, 243, 214); color: rgb(138, 90, 0); font-weight: 600; font-style: normal; font-size: 14px;">Realizamos entregas apenas dentro do raio de até 5 km da loja.</div>
+     <div class="grid sm:grid-cols-2 gap-3">
+      <div><label data-template-id="lbl-name" for="f-name" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Nome</label> <input id="f-name" type="text" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+      </div>
+      <div><label data-template-id="lbl-phone" for="f-phone" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Telefone</label> <input id="f-phone" type="tel" inputmode="numeric" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+      </div>
+      <div><label data-template-id="lbl-street" for="f-street" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Rua</label> <input id="f-street" type="text" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+      </div>
+      <div><label data-template-id="lbl-number" for="f-number" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Número</label> <input id="f-number" type="text" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+      </div>
+      <div><label data-template-id="lbl-neigh" for="f-neigh" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Bairro</label> <input id="f-neigh" type="text" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+      </div>
+      <div><label data-template-id="lbl-comp" for="f-comp" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Complemento</label> <input id="f-comp" type="text" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+      </div>
+      <div class="sm:col-span-2"><label data-template-id="lbl-ref" for="f-ref" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Ponto de referência</label> <input id="f-ref" type="text" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+      </div>
+     </div>
+     <div class="grid sm:grid-cols-2 gap-3">
+      <div><label data-template-id="lbl-day" for="f-day" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Dia da semana</label> <select id="f-day" onchange="recalc()" class="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"> <option value="week">Segunda a Quinta</option> <option value="weekend">Sexta a Domingo</option> </select>
+      </div>
+      <div><label data-template-id="lbl-dist" for="f-dist" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Distância</label> <select id="f-dist" onchange="recalc()" class="w-full rounded-lg border border-slate-300 px-3 py-2 bg-white"></select>
+      </div>
+     </div>
+    </div>
+   </section><!-- STEP 6: PAYMENT -->
+   <section aria-labelledby="s6" class="fade-up rounded-2xl p-5" style="background:var(--section)">
+    <h2 id="s6" data-template-id="payment-title" class="canva-text mb-3" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 24px;">6. Forma de pagamento</h2>
+    <div id="payment-opts" class="flex flex-wrap gap-2"></div>
+    <div id="change-wrap" class="hidden mt-4"><label data-template-id="lbl-change" for="f-change" class="canva-text block text-sm font-medium mb-1" style="color: rgb(51, 65, 85); font-weight: 500; font-style: normal; font-size: 16px;">Troco para quanto?</label> <input id="f-change" type="text" inputmode="numeric" class="w-full sm:w-64 rounded-lg border border-slate-300 px-3 py-2">
+    </div>
+   </section><!-- SUMMARY -->
+   <section aria-labelledby="s7" class="fade-up rounded-2xl overflow-hidden shadow-lg" style="border:2px solid var(--accent)">
+    <div class="px-5 py-3" style="background:var(--primary)">
+     <h2 id="s7" data-template-id="summary-title" class="canva-text text-white" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 20px;">Resumo do pedido</h2>
+    </div>
+    <div class="bg-white p-5">
+     <div id="summary-body" class="space-y-1.5 text-sm text-slate-600"></div>
+     <div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-200"><span data-template-id="total-label" class="canva-text font-bold text-lg" style="color: rgb(75, 14, 107); font-weight: 700; font-style: normal; font-size: 18px;">Total</span> <span id="total-value" class="font-bold text-2xl" style="color:var(--btn)">R$ 0,00</span>
+     </div>
+     <p id="form-error" class="hidden mt-3 text-sm font-medium text-red-600"></p><button type="button" id="submit-btn" onclick="submitOrder()" data-template-id="submit-button" class="btn-main canva-button w-full mt-5 rounded-xl py-3.5 font-semibold text-white flex items-center justify-center gap-2" style="background: rgb(123, 44, 191); color: rgb(255, 255, 255); font-weight: 700; font-size: 17px;"> <span id="submit-label"></span> <i id="submit-spinner" data-lucide="loader-2" class="hidden spin" style="width:18px;height:18px"></i> </button>
+     <div id="success-box" class="hidden mt-4 rounded-xl p-4 text-center" style="background:rgba(126,217,87,.15)"><i data-lucide="check-circle-2" style="width:36px;height:36px;color:var(--success)" class="mx-auto"></i>
+      <p data-template-id="success-message" class="canva-text mt-2 font-semibold" style="color: rgb(61, 122, 26); font-weight: 600; font-style: normal; font-size: 15px;">Pedido enviado com sucesso! Em breve entraremos em contato. Obrigado por escolher o Açaí da Lalu! 💜</p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer data-template-id="footer-section" class="canva-footer w-full mt-10 py-8 text-center" style="background: rgb(75, 14, 107);">
+   <p data-template-id="footer-text" class="canva-text text-white/90 text-sm px-4" style="color: rgb(234, 220, 245); font-weight: 400; font-style: normal; font-size: 13px;">Açaí da Lalu Delivery · (84) 99810-7521 · @Acai_dalu_delivery · Entregas até 5 km da loja</p>
+  </footer>
+  <script src="/_sdk/e063511df281944a.editing_sdk.js" integrity="sha512-Xa8p4aPfoMxVnzxQE2WAG0FfoaPLxdjOJMfUZGm1yZosJTYmnNDvgLkJ2EoN0i3zxjeQVAzUMSXNvTKQVqbXyQ=="></script>
+  <script>
+  // ---- Static application data (logic only — NOT user-editable content) ----
+  const SIZES = {
+    '300': { label: 'Açaí 300 ml', base: 15.00, freeCount: 3 },
+    '500': { label: 'Açaí 500 ml', base: 18.00, freeCount: 5 },
+  };
+  const FREE_TOPPINGS = ['Gotas de chocolate','Granola','Chocoboll','Jujuba','Paçoca','Leite em pó','Leite condensado (30 g)','Disquete'];
+  const CREAMS = ['Creme de Ninho','Creme de Avelã'];
+  const PAID_EXTRAS = [
+    { name:'Gotas de chocolate', price:2.50 },
+    { name:'Granola', price:2.00 },
+    { name:'Chocoboll', price:2.50 },
+    { name:'Jujuba', price:2.00 },
+    { name:'Amendoim', price:2.50 },
+    { name:'Paçoca', price:2.00 },
+    { name:'Leite em pó', price:3.00 },
+    { name:'Leite condensado (30 g)', price:3.00 },
+    { name:'Disquete', price:2.50 },
+    { name:'Creme de Ninho (extra)', price:4.00 },
+    { name:'Creme de Avelã (extra)', price:4.00 },
+  ];
+  const FREIGHT = {
+    week: [
+      { label:'Até 1 km', fee:5.00 },
+      { label:'1 a 2 km', fee:7.00 },
+      { label:'2 a 3 km', fee:9.00 },
+      { label:'3 a 4 km', fee:10.00 },
+      { label:'4 a 5 km', fee:12.00 },
+    ],
+    weekend: [
+      { label:'0 a 500 m', fee:3.00 },
+      { label:'501 m a 1 km', fee:5.00 },
+      { label:'1,01 km a 1,99 km', fee:7.00 },
+      { label:'2 km a 2,99 km', fee:9.00 },
+      { label:'3 km a 3,99 km', fee:12.00 },
+      { label:'4 km a 5 km', fee:15.00 },
+    ],
+  };
+  const PAYMENTS = ['PIX','Dinheiro','Cartão de Débito','Cartão de Crédito'];
+
+  // ---- State ----
+  const state = { size:null, free:new Set(), cream:null, extras:{}, deliveryType:null, payment:null, submitting:false };
+
+  const brl = n => n.toLocaleString('pt-BR',{ style:'currency', currency:'BRL' });
+
+  // ---- Build dynamic UI ----
+  function buildFreeToppings(){
+    const c = document.getElementById('free-toppings'); c.innerHTML='';
+    FREE_TOPPINGS.forEach(name=>{
+      const b=document.createElement('button');
+      b.type='button'; b.className='chip px-4 py-2 rounded-full text-sm font-medium bg-white border-2 border-slate-200';
+      b.textContent=name; b.dataset.name=name;
+      b.onclick=()=>toggleFree(name,b);
+      c.appendChild(b);
+    });
+  }
+  function buildCream(){
+    const c=document.getElementById('free-cream'); c.innerHTML='';
+    CREAMS.forEach(name=>{
+      const b=document.createElement('button');
+      b.type='button'; b.className='pill px-5 py-2.5 rounded-full font-medium bg-white border-2 border-slate-200';
+      b.textContent=name; b.dataset.name=name;
+      b.onclick=()=>{ state.cream=name; document.querySelectorAll('#free-cream .pill').forEach(x=>x.classList.remove('is-active')); b.classList.add('is-active'); recalc(); };
+      c.appendChild(b);
+    });
+  }
+  function buildExtras(){
+    const c=document.getElementById('paid-extras'); c.innerHTML='';
+    PAID_EXTRAS.forEach(item=>{
+      const row=document.createElement('div');
+      row.className='flex items-center justify-between bg-white rounded-xl px-4 py-2.5 border border-slate-100';
+      row.innerHTML=`
+        <div>
+          <p class="font-medium text-sm text-slate-700">${item.name}</p>
+          <p class="text-xs" style="color:var(--btn)">${brl(item.price)}</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="button" aria-label="Remover" class="stepper-btn w-8 h-8 rounded-full text-white font-bold flex items-center justify-center" style="background:var(--accent)">−</button>
+          <span class="w-5 text-center font-semibold qty">0</span>
+          <button type="button" aria-label="Adicionar" class="stepper-btn w-8 h-8 rounded-full text-white font-bold flex items-center justify-center" style="background:var(--btn)">+</button>
+        </div>`;
+      const [minus,,plus]=row.querySelectorAll('button, span, button');
+      const btns=row.querySelectorAll('button'); const qtyEl=row.querySelector('.qty');
+      btns[0].onclick=()=>{ const q=Math.max(0,(state.extras[item.name]||0)-1); if(q===0)delete state.extras[item.name]; else state.extras[item.name]=q; qtyEl.textContent=q; recalc(); };
+      btns[1].onclick=()=>{ const q=(state.extras[item.name]||0)+1; state.extras[item.name]=q; qtyEl.textContent=q; recalc(); };
+      c.appendChild(row);
+    });
+  }
+  function buildFreight(){
+    const sel=document.getElementById('f-dist');
+    const day=document.getElementById('f-day').value;
+    sel.innerHTML='';
+    FREIGHT[day].forEach((f,i)=>{
+      const o=document.createElement('option'); o.value=i; o.textContent=`${f.label} — ${brl(f.fee)}`; sel.appendChild(o);
+    });
+  }
+  function buildPayments(){
+    const c=document.getElementById('payment-opts'); c.innerHTML='';
+    PAYMENTS.forEach(name=>{
+      const b=document.createElement('button');
+      b.type='button'; b.className='pill px-5 py-2.5 rounded-full font-medium bg-white border-2 border-slate-200';
+      b.textContent=name; b.dataset.name=name;
+      b.onclick=()=>{ state.payment=name; document.querySelectorAll('#payment-opts .pill').forEach(x=>x.classList.remove('is-active')); b.classList.add('is-active'); document.getElementById('change-wrap').classList.toggle('hidden', name!=='Dinheiro'); recalc(); };
+      c.appendChild(b);
+    });
+  }
+
+  // ---- Interactions ----
+  function selectSize(size){
+    state.size=size;
+    document.querySelectorAll('.prod-card').forEach(c=>c.classList.toggle('is-selected', c.dataset.size===size));
+    // reset free toppings beyond new limit
+    if(state.free.size > SIZES[size].freeCount){ state.free.clear(); document.querySelectorAll('#free-toppings .chip').forEach(x=>x.classList.remove('is-active')); }
+    updateFreeUI(); recalc();
+  }
+  function toggleFree(name,btn){
+    if(!state.size) return;
+    const limit=SIZES[state.size].freeCount;
+    if(state.free.has(name)){ state.free.delete(name); btn.classList.remove('is-active'); }
+    else { if(state.free.size>=limit) return; state.free.add(name); btn.classList.add('is-active'); }
+    updateFreeUI(); recalc();
+  }
+  function updateFreeUI(){
+    const counter=document.getElementById('free-counter');
+    if(!state.size){ counter.textContent='Selecione um tamanho primeiro.'; document.querySelectorAll('#free-toppings .chip').forEach(b=>b.classList.add('is-disabled')); return; }
+    const limit=SIZES[state.size].freeCount;
+    counter.textContent=`${state.free.size} de ${limit} complementos gratuitos selecionados`;
+    const full=state.free.size>=limit;
+    document.querySelectorAll('#free-toppings .chip').forEach(b=>{
+      b.classList.remove('is-disabled');
+      if(full && !state.free.has(b.dataset.name)) b.classList.add('is-disabled');
+    });
+  }
+  function setDeliveryType(type){
+    state.deliveryType=type;
+    document.getElementById('opt-entrega').classList.toggle('is-active', type==='Entrega');
+    document.getElementById('opt-retirada').classList.toggle('is-active', type==='Retirada');
+    document.getElementById('delivery-form').classList.toggle('hidden', type!=='Entrega');
+    recalc();
+  }
+
+  function computeExtrasTotal(){
+    let t=0; const map={};
+    PAID_EXTRAS.forEach(p=>map[p.name]=p.price);
+    for(const [k,q] of Object.entries(state.extras)) t += (map[k]||0)*q;
+    return t;
+  }
+  function currentFreight(){
+    if(state.deliveryType!=='Entrega') return 0;
+    const day=document.getElementById('f-day').value;
+    const i=parseInt(document.getElementById('f-dist').value||'0',10);
+    return FREIGHT[day][i] ? FREIGHT[day][i].fee : 0;
+  }
+
+  function recalc(){
+    const base = state.size ? SIZES[state.size].base : 0;
+    const extras = computeExtrasTotal();
+    const freight = currentFreight();
+    const total = base + extras + freight;
+
+    const body=document.getElementById('summary-body'); body.innerHTML='';
+    const row=(l,v,strong)=>{ const d=document.createElement('div'); d.className='flex justify-between'+(strong?' font-semibold text-slate-800':''); d.innerHTML=`<span>${l}</span><span>${v}</span>`; body.appendChild(d); };
+
+    if(state.size){ row(SIZES[state.size].label, brl(base)); }
+    else { const p=document.createElement('p'); p.className='text-slate-400'; p.textContent='Selecione um tamanho para começar.'; body.appendChild(p); }
+
+    if(state.free.size){ row('Complementos grátis', [...state.free].join(', ')); }
+    if(state.cream){ row('Creme', state.cream); }
+    const exNames=Object.entries(state.extras).filter(([,q])=>q>0);
+    if(exNames.length){
+      exNames.forEach(([k,q])=>{ const price=PAID_EXTRAS.find(p=>p.name===k).price; row(`${k} ×${q}`, brl(price*q)); });
+    }
+    if(extras>0) row('Total dos adicionais', brl(extras), true);
+    if(state.deliveryType) row('Entrega', state.deliveryType==='Entrega'?brl(freight):'Retirada (grátis)');
+    if(state.payment) row('Pagamento', state.payment);
+
+    document.getElementById('total-value').textContent = brl(total);
+    return total;
+  }
+
+  // ---- Phone mask ----
+  function maskPhone(el){
+    el.addEventListener('input',()=>{
+      let v=el.value.replace(/\D/g,'').slice(0,11);
+      if(v.length>6) v=`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+      else if(v.length>2) v=`(${v.slice(0,2)}) ${v.slice(2)}`;
+      else if(v.length>0) v=`(${v}`;
+      el.value=v;
+    });
+  }
+  function maskMoney(el){
+    el.addEventListener('input',()=>{
+      let v=el.value.replace(/\D/g,'');
+      if(!v){ el.value=''; return; }
+      el.value=(parseInt(v,10)/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    });
+  }
+
+  // ---- Validation + submit ----
+  function showError(msg){ const e=document.getElementById('form-error'); e.textContent=msg; e.classList.remove('hidden'); }
+  function clearError(){ document.getElementById('form-error').classList.add('hidden'); }
+
+  async function submitOrder(){
+    if(state.submitting) return;
+    clearError();
+    if(!state.size) return showError('Escolha o tamanho do açaí.');
+    if(!state.cream) return showError('Escolha um creme gratuito.');
+    if(!state.deliveryType) return showError('Escolha entre entrega ou retirada.');
+    if(!state.payment) return showError('Escolha a forma de pagamento.');
+
+    let name='', phone='', address='Retirada na loja';
+    if(state.deliveryType==='Entrega'){
+      name=document.getElementById('f-name').value.trim();
+      phone=document.getElementById('f-phone').value.trim();
+      const street=document.getElementById('f-street').value.trim();
+      const number=document.getElementById('f-number').value.trim();
+      const neigh=document.getElementById('f-neigh').value.trim();
+      const comp=document.getElementById('f-comp').value.trim();
+      const ref=document.getElementById('f-ref').value.trim();
+      if(!name||!phone||!street||!number||!neigh) return showError('Preencha nome, telefone, rua, número e bairro.');
+      if(phone.replace(/\D/g,'').length<10) return showError('Informe um telefone válido.');
+      address=`${street}, ${number} - ${neigh}${comp?' ('+comp+')':''}${ref?' | Ref: '+ref:''}`;
+    }
+
+    const extrasStr=Object.entries(state.extras).filter(([,q])=>q>0).map(([k,q])=>`${k} x${q}`).join(', ');
+    const freight=currentFreight();
+    const total=recalc();
+    let payment=state.payment;
+    if(payment==='Dinheiro'){ const ch=document.getElementById('f-change').value.trim(); if(ch) payment=`Dinheiro (troco para ${ch})`; }
+
+    const record={
+      created_at:new Date().toISOString(),
+      customer_name:name||'—',
+      phone:phone||'—',
+      address:address,
+      delivery_type:state.deliveryType,
+      product:SIZES[state.size].label,
+      free_toppings:[...state.free].join(', ')||'Nenhum',
+      paid_toppings:extrasStr||'Nenhum',
+      cream:state.cream,
+      delivery_fee:freight,
+      payment_method:payment,
+      total:total,
+    };
+
+    // loading state + duplicate protection
+    state.submitting=true;
+    const btn=document.getElementById('submit-btn');
+    btn.disabled=true; btn.style.opacity='.7';
+    document.getElementById('submit-spinner').classList.remove('hidden');
+
+    try{
+      const res=await window.dataSdk.create(record);
+      if(res.isOk){
+        document.getElementById('success-box').classList.remove('hidden');
+        document.getElementById('success-box').scrollIntoView({behavior:'smooth',block:'center'});
+        btn.classList.add('hidden');
+      }else{
+        showError('Não foi possível enviar o pedido. Tente novamente.');
+        state.submitting=false; btn.disabled=false; btn.style.opacity='1';
+      }
+    }catch(e){
+      showError('Não foi possível enviar o pedido. Tente novamente.');
+      state.submitting=false; btn.disabled=false; btn.style.opacity='1';
+    }finally{
+      document.getElementById('submit-spinner').classList.add('hidden');
+    }
+  }
+
+  // ---- Init ----
+  document.addEventListener('DOMContentLoaded', async ()=>{
+    buildFreeToppings(); buildCream(); buildExtras(); buildPayments();
+    // default day-type from current date (Fri=5,Sat=6,Sun=0 => weekend)
+    const d=new Date().getDay();
+    document.getElementById('f-day').value=(d===5||d===6||d===0)?'weekend':'week';
+    buildFreight();
+    document.getElementById('f-day').addEventListener('change',()=>{ buildFreight(); recalc(); });
+    maskPhone(document.getElementById('f-phone'));
+    maskMoney(document.getElementById('f-change'));
+    updateFreeUI(); recalc();
+    lucide.createIcons();
+
+    // write-only sheet: init required to enable saving
+    try{ await window.dataSdk.init({ onDataChanged(){} }); }catch(e){}
+  });
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a173ee31f7f800d6',t:'MTc4MzM5NjcwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>
